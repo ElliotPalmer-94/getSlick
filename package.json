@@ -1,0 +1,23 @@
+{
+  "name": "getslick",
+  "version": "1.0.0",
+  "description": "QA Test",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElliotPalmer-94/getSlick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ElliotPalmer-94/getSlick/issues"
+  },
+  "homepage": "https://github.com/ElliotPalmer-94/getSlick#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1"
+  }
+}
