@@ -65,6 +65,8 @@ export class CalendarPage {
         await this.page.goto('https://staging-salon.getslick.com/salon/#/salon/28161/day/today');
     }
 
+
+    // Grab the last confirmed booking element based on time and service
     confirmedBooking(time: string, service?: string) {
         let confirmedBookingElemnet = this.page
             .locator('[data-bem="ScheduleProcedure__appointment"]')
@@ -77,10 +79,12 @@ export class CalendarPage {
         return confirmedBookingElemnet.last();
     }
 
+    // Grab the time slot element based on the time key
     getTimeSlot(timeKey: string) {
         return this.page.locator(`[data-slot-key="${timeKey}"]`);
     }
 
+    // Determine the time category based on the time key morning, afternoon, or evening
     private getTimeCategory(timeKey: string) {
         const [h, m] = timeKey.split(':').map(Number);
         const minutes = h * 60 + m;
@@ -93,6 +97,7 @@ export class CalendarPage {
         return 'evening';
     }
 
+    // Select a booking time based on the time key
     async selectBookingTime(timeKey: string) {
         const category = this.getTimeCategory(timeKey);
         const isVisible = await this.getTimeSlot(timeKey).isVisible();
