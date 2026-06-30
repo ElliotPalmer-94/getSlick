@@ -2,10 +2,6 @@
 
 A small Playwright test suite for validating key login and password recovery flows for the Getslick application.
 
-## Notes
-
-MFA is enabled for this account, so I did not have time to implement email-based authentication code retrieval for the full login flow. Instead, I focused on the other testable flows that could be covered within the available time.
-
 ## Setup
 
 Install Playwright by following the official guide:
@@ -42,3 +38,5 @@ The suite currently covers:
 - Valid login flow
 - Invalid login flow
 - Forgot password flow
+- Checkout (walk in) flow
+- Add booking flow
