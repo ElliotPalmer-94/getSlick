@@ -27,7 +27,7 @@ Run tests with the UI and headed browser mode:
 npx playwright test --headed --ui
 ```
 
-Make sure to change these with your login details, these can be found in the `login.spec`
+Make sure to change these with your login details, these can be found in the `login.ts`
 ```
 const email = process.env.EMAIL || 'email@example.com'; 
 const password = process.env.PASSWORD || 'password'; 

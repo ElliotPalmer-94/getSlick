@@ -30,7 +30,7 @@ export class LoginPage {
         await this.page.goto('https://staging-salon.getslick.com');
     }
 
-    readonly DEFAULT_EMAIL = process.env.EMAIL ?? 'emaple@hotmail.co.uk'; // Change this to your own email or set the EMAIL and PASSWORD environment variables
+    readonly DEFAULT_EMAIL = process.env.EMAIL ?? 'email@example.com'; // Change this to your own email or set the EMAIL and PASSWORD environment variables
     readonly DEFAULT_PASSWORD = process.env.PASSWORD ?? 'password'; // Change this to your own password or set the EMAIL and PASSWORD environment variables
 
     async login(
